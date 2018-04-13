@@ -92,10 +92,10 @@ Beta version
 
 ## License
 
-Free Code Forever and Wakanda
+Free Code Forever and Wakanda.
 
 ## Acknowledgments
 
 * Terraform Team
-* Youtuber,Blogger and contributor of all type
+* Youtuber, Blogger and contributor of all type
 * and You
