@@ -13,7 +13,7 @@ This project use Terraform to create the vRSX ( https://www.terraform.io/ )
   3. upload this repo to your laptop
   4. create a file: var_value.tfvars ( .tfvars extension is important )
   5. download terraform ( on window it will be an .exe file )
-  6. in the local repro directory, run the command:  terraform --
+  6. in the local repro directory, run the command: terraform.exe <command_here>  --var-file="var_value.tfvars"
 
 ### Prerequisites
 
@@ -41,11 +41,11 @@ cd xxxxxx
 
 .\terraform.exe init
 
-.\terraform.exe plan  -var-file="var_value.tfvars"
+.\terraform.exe plan  --var-file="var_value.tfvars"
 
-.\terraform.exe apply  -var-file="var_value.tfvars"
+.\terraform.exe apply  --var-file="var_value.tfvars"
 
-.\terraform.exe destroy -var-file="var_value.tfvars"
+.\terraform.exe destroy --var-file="var_value.tfvars"
 
 ```
 
@@ -56,11 +56,11 @@ cd xxxxxx
 
 terraform init
 
-terraform plan  -var-file="var_value.tfvars"
+terraform plan  --var-file="var_value.tfvars"
 
-terraform apply  -var-file="var_value.tfvars"
+terraform apply  --var-file="var_value.tfvars"
 
-terraform destroy -var-file="var_value.tfvars"
+terraform destroy --var-file="var_value.tfvars"
 
 ```
 
