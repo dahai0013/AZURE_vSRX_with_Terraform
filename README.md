@@ -63,15 +63,6 @@ terraform destroy -var-file="var_value.tfvars"
 
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-
 
 ## Contributing
 
@@ -89,7 +80,7 @@ Beta version
 
 ## License
 
-Free Code Forever and Wakanda 
+Free Code Forever and Wakanda
 
 ## Acknowledgments
 
