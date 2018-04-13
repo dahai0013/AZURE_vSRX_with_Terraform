@@ -1,6 +1,6 @@
 # AZURE_vSRX_with_Terraform
 
-This project project has been created to simplify the creation/instantiation of the JUNIPER vSRX NG-Firewall on AZURE.
+This project has been created to simplify the creation/instantiation of the JUNIPER vSRX NG-Firewall on AZURE.
 https://www.juniper.net/uk/en/products-services/security/srx-series/vsrx/
 
 This project use Terraform to create the vRSX ( https://www.terraform.io/ )
@@ -8,18 +8,23 @@ This project use Terraform to create the vRSX ( https://www.terraform.io/ )
 ## Getting Started
 
   1- Create an Account on Azure ( https://portal.azure.com/)
-  2- Create an account with permission 
-  3- upload this repo to you laptop
+  2- Create an account on Azure with permission ( for the Terraform script )
+  3- upload this repo to your laptop
   4- create a file: var_value.tfvars ( .tfvars extension is important )
   5- download terraform ( on window it will be an .exe file )
-  6- in the local repro dirctory, run the command:  terraform --
+  6- in the local repro directory, run the command:  terraform --
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+  Create the file:  var_value.tfvars
 
 ```
-Give examples
+azure_subscription_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+azure_client_id       = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+client_secret   = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+tenant_id       = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+vm_username = "myusername"
+vm_password = "myagoodpassword"
 ```
 
 ### Installing
@@ -76,7 +81,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
@@ -93,4 +98,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
-
