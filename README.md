@@ -7,12 +7,12 @@ This project use Terraform to create the vRSX ( https://www.terraform.io/ )
 
 ## Getting Started
 
-  * 1- Create an Account on Azure ( https://portal.azure.com/)
-  * 2- Create an account on Azure with permission ( for the Terraform script )
-  3- upload this repo to your laptop
-  4- create a file: var_value.tfvars ( .tfvars extension is important )
-  5- download terraform ( on window it will be an .exe file )
-  6- in the local repro directory, run the command:  terraform --
+  1. Create an Account on Azure ( https://portal.azure.com/)
+  2. Create an account on Azure with permission ( for the Terraform script )
+  3. upload this repo to your laptop
+  4. create a file: var_value.tfvars ( .tfvars extension is important )
+  5. download terraform ( on window it will be an .exe file )
+  6. in the local repro directory, run the command:  terraform --
 
 ### Prerequisites
 
@@ -29,25 +29,39 @@ vm_password = "myagoodpassword"
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+You can do it ;-)
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+on Windows:
+
+```
+cd xxxxxx
+
+.\terraform.exe init
+
+.\terraform.exe plan  -var-file="var_value.tfvars"
+
+.\terraform.exe apply  -var-file="var_value.tfvars"
+
+.\terraform.exe destroy -var-file="var_value.tfvars"
+
+```
+
+On linux:
+
+```
+cd xxxxxx
+
+terraform init
+
+terraform plan  -var-file="var_value.tfvars"
+
+terraform apply  -var-file="var_value.tfvars"
+
+terraform destroy -var-file="var_value.tfvars"
+
+```
 
 ### Break down into end to end tests
 
@@ -57,44 +71,28 @@ Explain what these tests test and why
 Give an example
 ```
 
-### And coding style tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Everyone is welcome ;-)
+
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+Beta version
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* Me, Myself and I ( https://www.youtube.com/watch?v=CGk962QLIzk )
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Free Code Forever and Wakanda 
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* Terraform Team
+* Youtuber,Blogger and contributor of all type
+* and You
