@@ -65,6 +65,54 @@ terraform destroy --var-file="var_value.tfvars"
 ```
 
 
+## The test to create the Infrastructure and the vSRX
+
+# Group of resources
+resource "azurerm_resource_group" "grp_demo"   ( name & location )
+
+# Network :  CIDR block
+resource "azurerm_virtual_network" "vnet_demo"
+
+
+#create 3 subnets: ( mapped to r.group & v.net )
+resource "azurerm_subnet" "untrusted_subnet"
+resource "azurerm_subnet" "trusted_subnet"
+resource "azurerm_subnet" "mgt_subnet"
+
+# create Public IP address for Mgt and untrusted interface
+resource "azurerm_public_ip" "PIP-if-vsrx1-fxp0"
+resource "azurerm_public_ip" "PIP-if-vsrx1-ge-0-0-0"
+
+# create interface ( connection ) in the three subnet
+resource "azurerm_network_interface" "if-vsrx1-fxp0"
+resource "azurerm_network_interface" "if-vsrx1-ge-0-0-0"
+resource "azurerm_network_interface" "if-vsrx1-ge-0-0-1"
+
+#Create storage account
+resource "azurerm_storage_account" "jnstorageaccount1"
+resource "azurerm_storage_container" "jnstoragecont1"
+
+#create the VM: vsrx1
+resource "azurerm_virtual_machine" "vsrx1"
+  storage_image_reference
+  storage_os_disk
+  os_profile
+  os_profile_linux_config
+  plan
+
+
+#Create default route / static route for the trusted and untrusted subnets
+resource "azurerm_route_table" "rtt-vsrx1-untrusted" {
+  route
+
+resource "azurerm_route_table" "rtt-vsrx1-trusted" {
+  route
+
+# location of the group
+output "location" {
+  value = "${azurerm_resource_group.grp_demo.location}"
+}
+
 ## Contributing
 
 Everyone is welcome ;-)
