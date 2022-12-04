@@ -9,7 +9,7 @@ This project use Terraform to create the vRSX ( https://www.terraform.io/ )
 
   1. Create an Account on Azure ( https://portal.azure.com/)
   2. Add a Contributor role to the subscription on Azure Portal or azure cli ( for the Terraform script to connect)
-        https://dahai0013.atlassian.net/wiki/spaces/LIN/pages/295698465/1-+login+and+permissions
+        https://thefreetelecomuni.atlassian.net/wiki/spaces/JA/pages/553680/1-+login+and+permissions
   3. upload this repo to your laptop
   4. create a file: var_value.tfvars ( .tfvars extension is important )
   5. download terraform ( on window it will be an .exe file )
